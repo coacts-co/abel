@@ -1,46 +1,90 @@
 /*
-Color Palette
+COLOR PALETTE
 
-rgb(12, 12, 12)
-rgb(24, 24, 24)
-rgb(36, 36, 36)
-rgb(48, 48, 48) -> "Dark Charcoal"
-rgb(121, 121, 121)
-rgb(242, 232, 218) -> "Pristine" 
-rgb(255, 190, 152) -> "Peach Fuzz" 
-rgb(220, 189, 158) -> "Honey Peach" 
-rgb(239, 207, 186) -> "Peach Puree"
-rgb(167, 140, 123) -> "Almondine"
-rgb(150, 79, 76) -> "Marsala"
+dict {
+	"peach fuzz": "#ffbe98",
+	"marsala": "#ad655f",
+}
 
-*/
+/* Importing different styles of Monaspace Krypton */
+@font-face {
+    font-family: 'Monaspace Krypton';
+    src: url('https://github.com/githubnext/monaspace/blob/main/fonts/webfonts/MonaspaceKrypton-Regular.woff2?raw=true') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monaspace Krypton';
+    src: url('https://github.com/githubnext/monaspace/blob/main/fonts/webfonts/MonaspaceKrypton-Bold.woff2?raw=true') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monaspace Krypton';
+    src: url('https://github.com/githubnext/monaspace/blob/main/fonts/webfonts/MonaspaceKrypton-Light.woff2?raw=true') format('woff2');
+    font-weight: 300; /* Typically 300 is used for Light */
+    font-style: normal;
+}
+
+/* Additional styles might include Italic, Semi-Bold, etc., if available */
+@font-face {
+    font-family: 'Monaspace Krypton';
+    src: url('https://github.com/githubnext/monaspace/blob/main/fonts/webfonts/MonaspaceKrypton-Italic.woff2?raw=true') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
 
 /* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #111;
-    color: #fff;
+    background-color: #f4f1ea; /* Cream background for the whole page */
+    color: #333;
     line-height: 1.6;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     align-items: center;
+    cursor: url('primary.cur'), auto;
+}
+
+a, button {
+	cursor: url('pointer.cur'), pointer;
+	text-decoration: none;
+}
+
+.main-container {
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    background: #000;
-    padding: 20px 10%;
+    background: #fff7f0; /* Lighter cream for the header */
+    color: #333;
+    padding: 20px 5%;
     text-align: center;
-    width: 100%;
 }
 
 header h1 {
-    color: #FFBE98;
+    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+    color: #FFBE98BF; /* Peach fuzz color for main header */
+    font-weight: 400;
+}
+
+h2 {
+	font-weight: 300;
+	color: rgba(121, 121, 121, 0.5);
 }
 
 nav ul {
@@ -49,51 +93,61 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+    background-color: #ffbe988f;
+    border-radius: 4px;
+    padding: 2px 8px;
 }
 
 .nav-link:hover, .nav-link:focus {
-    color: #FFBE98;
+    color: #ffffff9f;
+    transform: translateY(-2px);
 }
 
-.container {
-    width: 80%;
-    max-width: 960px;
-    margin-top: 20px;
-}
-
-section {
-    background: #222;
+.index-container {
+	padding: 2.5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     padding: 20px;
-    margin-bottom: 20px;
+}
+
+.about-container {
+	padding: 2.5%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.glass-section {
+    background: rgba(255, 253, 248, 0.9); /* Translucent cream cards */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Soft shadows for depth */
+    transition: background-color 0.5s, transform 0.3s;
+}
+
+.glass-section:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 253, 248, 0.95); /* Slightly brighter on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #000;
+    background: #fff7f0; /* Matching the header */
     color: #666;
-    width: 100%;
 }
 
-/* Add transitions for hover effects */
-a {
-    transition: transform 0.3s ease;
-}
-
-a:hover {
-    transform: scale(1.1);
-}
-
-/* Headers */
-h1 {
-    color: rgba(0, 0, 0, 0.2);
+/* Content-level styles */
+p {
+	font-size: 9pt;
 }
