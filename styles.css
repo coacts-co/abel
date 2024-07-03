@@ -15,439 +15,66 @@ rgb(150, 79, 76) -> "Marsala"
 
 */
 
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    background-color: rgb(242, 232, 218, 0.9); /* "Pristine" */
-    color: rgba(0, 0, 0, 0.8);
-    margin: 0;
-    padding: 5%;
-}
-	
-.container {
-    max-width: 95%;
-    margin: auto;
-    padding: 5%;
-    /* background-color: rgb(64, 64, 64);*/
-    border-radius: 8px;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
 }
 
-.container #foremost {
-    background-color: rgb(32, 32, 32);
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 66.6%;
-    }
-}
-
-h1 {
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    background-color: rgb(
-    color: rgb(12, 12, 12);
-    margin-bottom: 5%;
-    font-weight: 400;
-    font-size: 3.6em;
-    padding: 5%;
-    border-radius: 4px;
-}
-
-h2 {
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    color: rgb(24, 24, 24);
-    font-weight: 500;
-    font-size: 3.0em;
-    margin-bottom: 2.5%;
-}
-
-h3 {
-	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    color: rgb(36, 36, 36);
-    font-weight: 600;
-    font-size: 2.4em;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding-left: 1%;
-}
-
-h4 {
-	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: rgb(48, 48, 48);
-    font-weight: 700;
-    font-size: 1.8em;
-	margin: 1%;
-}
-
-h5 {
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: rgb(60, 60, 60);
-    font-weight: 800;
-    font-size: 1.2em;
-	margin: 1%;
-}
-
-h6 {
-	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: rgba(72, 72, 72);
-    font-weight: 900;
-    font-size: 0.8em;
-	margin: 1%;
-}
-
-.reaction-description {
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-left: 2.5%;
-    padding-left: 2.5%;
-    padding-bottom: 0%;
-    padding-top: 2.5%;
-    border-left: 1px dotted #FFBE98;
-    color: rgba(242, 232, 218, 1);
-    font-size: 1.2em;
-    font-weight: 300;
-    text-align: left;
-}
-
-.reaction {
-    background-color: rgb(216, 200, 189, 0.8);
-    padding: 15px;
-    margin-top: 0.5%;
-    margin-bottom: 1%;
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-    border-radius: 4px;
+header {
+    background: #000;
+    padding: 20px 10%;
     text-align: center;
-    font-family: "Monaspace Krypton", "Menlo", "Courier New", Courier, monospace;
-    color: rgba(150, 79, 76, 0.9);
-    font-size: 1.25em;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-
-li {
-    margin-bottom: 2.5%;
-    font-size: 0.90em;
-}
-
-.highlight {
-	font-family: "Monaspace Krypton", "Menlo", "Courier New", Courier, monospace;
-    /* margin-top: 2.5%; */
-    /* margin-bottom: 2.5%; */
-    /* margin-right: 2.5%; */
-    /* margin-left: 2.5%; */
-    padding: 1%;
-    border-radius: 4px;
-    font-size: 12pt;
-    background-color: rgba(255, 190, 152, 0.2);
-    color: rgb(242, 232, 218);
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-	overflow-x: auto;  /* Enables horizontal scrolling */
-    -webkit-overflow-scrolling: touch;
-}
-
-#profiles .highlight {
-    white-space: nowrap; /* Keeps the content on a single line */
-}
-
-mark h1 {
-    background-color: rgba(255, 190, 152, 0.8);
-    color: #964F4C;
-    padding-left: 2.5%;
-    border-radius: 4px;
-}
-
-p mark {
-    background-color: rgba(216, 200, 189, 0.8);
-    color: #964F4C;
-    padding: 0.05px 2px;
-    margin: 0 1px;
-    border-radius: 2px;
-}
-
-.toggle-button {
-    cursor: pointer;
+header h1 {
     color: #FFBE98;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 4px;
-    padding-left: 2.5%;
-    padding-right: 5%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 1%;
-    font-size: 1.2em;
-    font-weight: 100;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: opacity 0.1s ease;
-    opacity: 1;
-}
-  .toggle-button:hover {
-    opacity: 0.8;
-  }
-
-.icon {
-    font-family: 'Menlo', Courier, monospace;
-    font-size: 0.75em;
-    margin-right: 1.5%;
-    font-weight: 1000;
 }
 
-#mechanisms {
-    margin-left: 3%;
-    border-left: 1px solid rgb(255, 190, 152);
-    margin-bottom: 1%;
+nav ul {
+    list-style: none;
 }
 
-#concepts {
-    margin-left: 3%;
-    border-left: 1px solid rgb(255, 190, 152);
-    margin-bottom: 1%;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-#formulae {
-    margin-left: 3%;
-    border-left: 1px solid rgb(255, 190, 152);
-    margin-bottom: 1%;
-}
-
-#syntheses {
-    margin-left: 3%;
-    margin-bottom: 1%;
-    border-left: 1px solid rgb(255, 190, 152);
-}
-
-#profiles {
-    margin-left: 3%;
-    margin-bottom: 1%;
-    border-left: 2px solid rgb(239, 207, 186);
-}
-
-#inventories {
-    margin-left: 3%;
-    margin-bottom: 1%;
-    border-left: 2px solid rgb(239, 207, 186);
-}
-
-#spellbooks {
-    margin-left: 3%;
-    margin-bottom: 1%;
-    border-left: 2px solid rgb(239, 207, 186);
-}
-
-#index {
-    margin-left: 3%;
-    margin-bottom: 1%;
-    border-left: 2px solid rgb(239, 207, 186);
-}
-
-.toggle-content {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.35s ease-in-out; /* Adjust transition timing as needed */
-}
-
-code {
-	font-weight: 140;
-}
-
-code mark{
-	background-color: #FFBE98;
-	color: #964F4C;
-	padding: 0.05px 2px;
-    margin: 0 1px;
-    border-radius: 2px;
-}
-
-.indent {
-	margin-left: 2.5%;
-}
-
-li mark {
-	background-color: rgba(216, 200, 189, 0.8);
-    color: #964F4C;
-    padding: 0.05px 2px;
-    margin: 0 1px;
-    border-radius: 2px;
-}
-
-ul {
-	margin-top: 1%;
-	margin-bottom: 0;
-	padding-top: 0;
-	padding-bottom: 0;
-    padding-left: 5%;
-}
-
-li {
-	margin-top: 1%;
-	margin-bottom: 2.5%;
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-left: 2.5%;
-}
-
-.popbox {
-    background-color: rgba(255, 190, 152, 0.2);
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-    margin: 0;
-    padding: auto;
-}
-
-a {
+.nav-link {
     text-decoration: none;
-    color: inherit; /* Optional: ensures the text color is inherited and not automatically blue */
-  }
-
-  a div {
-    transition: opacity 0.1s ease;
-    opacity: 1; /* Fully opaque initially */
-  }
-
-  /* Opacity of the div when the a is hovered */
-  a:hover div {
-    opacity: 0.6; /* Change to desired opacity on hover */
-  }
-
-.list_block {
-    margin: 0;
-    padding-top: 0%;
-    padding-bottom: 0%;
-    padding-left: 2.5%;
-    border-left: 1px solid rgba(216, 200, 189, 0.8);  
+    color: #fff;
+    transition: color 0.3s;
 }
 
-table {
-	border: 1px solid rgb(167, 140, 123);
-	border-collapse: collapse;
-	background-color: rgb(216, 200, 189);
-	color: rgb(150, 79, 76);
-	width: 100%;
-	margin-top: 0.5%;
-	margin-right: 1%;
-	margin-bottom: 0.5%;
-	margin-left: 1%;
+.nav-link:hover, .nav-link:focus {
+    color: #FFBE98;
 }
 
-thead {
-	border: 1px solid rgb(167, 140, 123);
-	font-size: 10pt;
-	font-weight: 700;
-	background-color: rgb(216, 200, 189);
-	color: rgb(150, 79, 76);
-	padding-left: 4px;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	text-align: left;
+section {
+    padding: 20px 10%;
+    border-bottom: 1px solid #222;
 }
 
-th {
-	border: 1px solid rgb(167, 140, 123);
-	font-size: 10pt;
-	font-weight: 700;
-	background-color: rgb(216, 200, 189);
-	color: rgb(150, 79, 76);
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 4px;
-	text-align: left;
-	height: 22px;
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000;
+    color: #666;
 }
 
-td {
-	border: 1px solid rgb(167, 140, 123);
-	font-size: 8pt;
-	font-weight: 400;
-	background-color: rgb(216, 200, 189);
-	color: rgba(0, 0, 0, 0.5);
-	text-align: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 4px;
+/* Add transitions for hover effects */
+a {
+    transition: transform 0.3s ease;
 }
 
-.table-bg {
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-	border-radius: 4px;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch
-}
-
-#profiles .table-bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1%;
-    font-family: "Monaspace Krypton", "Menlo", "Courier New", Courier, monospace;
-    background-color: rgba(255, 190, 152, 0.2);
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    padding: 2%;
-}
-
-#inventories div {
-	margin-left: 1%;
-	padding: 1%;
-}
-
-#spellbooks div {
-	margin-left: 1%;
-	padding: 1%;
-}
-
-
-#spellbooks .table-bg {
-	background-color: rgba(255, 190, 152, 0.2);
-	padding: 1%;
-}
-
-
-#inventories .table-bg {
-	background-color: rgba(255, 190, 152, 0.2);
-}
-
-#inventories table{
-	border: 1px solid rgb(167, 140, 123);
-	border-collapse: collapse;
-	background-color: rgb(216, 200, 189);
-	color: rgb(167, 140, 123);
-	width: 97.5%;
-	margin: 1%;
-}
-
-#spellbooks table{
-	border: 1px solid rgb(167, 140, 123);
-	border-collapse: collapse;
-	background-color: rgb(216, 200, 189);
-	color: rgb(167, 140, 123);
-	width: 97.5%;
-	margin: 1%;
-}
-
-#inventories p {
-	margin: 1%;
-}
-
-#spellbooks p {
-	margin: 1%;
-}
-
-#index .highlight {
-	margin-left: 2.5%;
-}
-
-#index .highlight p {
-	white-space: normal;
-}
-
-#index h3 {
-	margin: 1%;
-}
-
-hr.solid {
-	border-top: 2px solid rgb(255, 190, 152);
-	margin: 2.5% 0;
-	
+a:hover {
+    transform: scale(1.1);
 }
