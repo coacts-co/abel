@@ -21,3 +21,22 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Temporarily disabling the CSS transitions on the `header h1` element
+// and then re-enabling it after a brief timeout.
+//
+// This ensures that the transition is not immediately retriggered after
+// the header, which is anchored to `index.html`, is clicked and the page
+// reloaded.
+
+document.addEventListener('DOMContentLoaded', function() {
+    var header = document.querySelector('header h1');
+    
+    // Temporarily disable hover effects
+    header.classList.add('no-hover');
+
+    // Re-enable hover effects after 500 milliseconds
+    setTimeout(function() {
+        header.classList.remove('no-hover');
+    }, 1000); // You can adjust this delay based on your needs
+});

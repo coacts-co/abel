@@ -70,21 +70,55 @@ a, button {
 }
 
 header {
-    background: #fff7f0; /* Lighter cream for the header */
-    color: #333;
-    padding: 20px 5%;
+    background: #fff7f0; /* Constant light cream background for the header */
+    padding: 2%;
     text-align: center;
 }
 
 header h1 {
-    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-    color: #FFBE98BF; /* Peach fuzz color for main header */
-    font-weight: 400;
+    color: #fff7f0; /* Lighter cream color for text initially */
+    background-color: #ffbe9880; /* Peach fuzz with transparency for background */
+    font-weight: 222;
+    margin: 2%;
+    font-size: 64pt;
+    border-radius: 8px;
+    padding: 1%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for color and background */
+	/* backdrop-filter: blur(15px); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+header h1:hover {
+    color: white; /* Peach fuzz color for text on hover */
+    background-color: #ffbe98; /* Lighter cream color for background on hover */
+    transform: translateY(-5px);
+}
+
+header h1.no-hover {
+    transition: none;
+}
+
+header h1.no-hover:hover {
+    color: #fff7f0; /* Retain the initial color */
+    background-color: #ffbe9880; /* Retain the initial background color */
+    transform: none; /* No movement */
 }
 
 h2 {
 	font-weight: 300;
 	color: rgba(121, 121, 121, 0.5);
+}
+
+h3 {
+	max-width: 10%;
+	font-weight: 200;
+	color: rgba(255, 253, 248, 0.9);
+	background-color: #ffbe9880;
+	padding: 0 1%;
+	text-align: center;
+	border-radius: 4px;
+	margin: 1% 0;
 }
 
 nav ul {
@@ -93,22 +127,40 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin: 1%;
 }
 
 .nav-link {
     text-decoration: none;
     color: white;
-    transition: color 0.3s, transform 0.3s;
-    background-color: #ffbe988f;
-    border-radius: 4px;
+    background-color: #ffbe9880; /* Initially, the background color is peach fuzz with transparency */
+    border-radius: 2px;
     padding: 2px 8px;
+    font-size: 12pt;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Faster transition for hover effects */
 }
 
-.nav-link:hover, .nav-link:focus {
-    color: #ffffff9f;
-    transform: translateY(-2px);
+.nav-link:hover, .nav-link:focus, .nav-link:active {
+    color: #ffbe98; /* On hover, the text color changes to peach fuzz */
+    background-color: #fff7f0; /* On hover, the background color changes to lighter cream */
 }
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: #ffbe98; /* Initially, the background color is peach fuzz with transparency */
+    border: 1px solid #ffbe98;
+    border-radius: 2px;
+    padding: 2px 8px;
+    font-size: 12pt;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Faster transition for hover effects */
+}
+
+.nav-button:hover, .nav-button:focus {
+    color: #ffbe98; /* On hover, the text color changes to peach fuzz */
+    background-color: rgba(255, 253, 248, 0.9); /* On hover, the background color changes to lighter cream */
+}
+
 
 .index-container {
 	padding: 2.5%;
@@ -131,7 +183,7 @@ nav ul li {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Soft shadows for depth */
-    transition: background-color 0.5s, transform 0.3s;
+    transition: background-color 0.5s, transform 0.2s;
 }
 
 .glass-section:hover {
